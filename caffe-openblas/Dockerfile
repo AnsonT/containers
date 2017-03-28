@@ -36,7 +36,7 @@ RUN git clone -b ${CLONE_TAG} --depth 1 https://github.com/BVLC/caffe.git . && \
     cmake -DCPU_ONLY=1 -DBLAS=open .. && \
     make -j"$(nproc)"
 
-ENV OPENBLAS_NUM_THREADS=8
+ENV OPENBLAS_NUM_THREADS 8
 ENV PYCAFFE_ROOT $CAFFE_ROOT/python
 ENV PYTHONPATH $PYCAFFE_ROOT:$PYTHONPATH
 ENV PATH $CAFFE_ROOT/build/tools:$PYCAFFE_ROOT:$PATH
